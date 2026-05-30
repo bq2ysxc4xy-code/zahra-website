@@ -1,1 +1,117 @@
-/* style */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(
+135deg,
+#ffd6f6,
+#f2d4ff,
+#ffffff
+);
+overflow-x:hidden;
+min-height:100vh;
+}
+
+.page{
+display:none;
+min-height:100vh;
+padding:30px 20px;
+}
+
+.page.active{
+display:flex;
+justify-content:center;
+align-items:center;
+animation:fade .5s ease;
+}
+
+.container{
+max-width:900px;
+width:100%;
+text-align:center;
+}
+
+h1{
+font-size:2rem;
+margin-bottom:15px;
+color:#ff4fa3;
+}
+
+p{
+margin-bottom:20px;
+}
+
+.main-img{
+width:280px;
+max-width:90%;
+border-radius:25px;
+margin:20px auto;
+display:block;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+button{
+border:none;
+padding:14px 24px;
+margin:10px;
+border-radius:999px;
+cursor:pointer;
+background:#ff69b4;
+color:white;
+font-size:1rem;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.btns{
+position:relative;
+min-height:120px;
+}
+
+.runaway{
+position:absolute;
+}
+
+.cards{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin:25px 0;
+}
+
+.card{
+background:white;
+padding:18px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-6px) scale(1.03);
+}
+
+.song-card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.song-card a{
+display:inline-block;
+margin-top:10px;
+text-decoration:none;
+color:#ff4fa3;
+font-weight:bold;
+}

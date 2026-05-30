@@ -1,1 +1,271 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zahra 💖</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<!-- PAGE 1 -->
+
+<section class="page active" id="page1">
+
+<div class="container">
+
+<h1>Salaaam Zahra 👋✨</h1>
+
+<p>This is for u</p>
+
+<img src="images/welcome.png" class="main-img">
+
+<div class="btns">
+
+<button id="yes1" onclick="nextPage(2)">
+Yesss 😆
+</button>
+
+<button class="runaway">
+No 😒
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+<div class="container">
+
+<h1>Things li zwenen fik 💖</h1>
+
+<p>All the little things that make you special</p>
+
+<img src="images/special.jpg" class="main-img">
+
+<div class="cards">
+
+<div class="card">🌹 Your kindness</div>
+
+<div class="card">
+🌹 You make people feel comfortable around you
+</div>
+
+<div class="card">🌹 Ur eyes</div>
+
+<div class="card">🌹 Dhektek</div>
+
+<div class="card">🌹 Kifash katfkri</div>
+
+<div class="card">🌹 Sber dyalek</div>
+
+<div class="card">❤️ Sewtek (ahssan sewt)</div>
+
+<div class="card">🌹 Your energy</div>
+
+<div class="card">🌹 Your smile</div>
+
+<div class="card">🌹 Your personality</div>
+
+</div>
+
+<button onclick="nextPage(3)">
+Zid kml 😌
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+<div class="container">
+
+<h1>Prize Wheel 🎡</h1>
+
+<div class="wheel-container">
+
+<div id="wheel">
+
+<span>🏆</span>
+
+</div>
+
+</div>
+
+<button onclick="spinWheel()">
+Spin
+</button>
+
+<p id="wheelResult"></p>
+
+<button onclick="nextPage(4)">
+Zid kml 😎
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 4 -->
+
+<section class="page" id="page4">
+
+<div class="container">
+
+<h1>Compatibility Calculator ❤️</h1>
+
+<input
+type="text"
+id="name1"
+value="Ziad"
+placeholder="Your Name">
+
+<input
+type="text"
+id="name2"
+placeholder="Write Your Name">
+
+<button onclick="calculateLove()">
+Calculate
+</button>
+
+<h2 id="loveResult"></h2>
+
+<div class="btns">
+
+<button onclick="nextPage(5)">
+Hadshi jamel kemel 😌
+</button>
+
+<button class="runaway">
+La sf baraka 3lik 😭
+</button>
+
+</div>
+
+</div>
+
+</section>
+ <!-- PAGE 5 -->
+
+<section class="page" id="page5">
+
+<div class="container">
+
+<h1>Songs 🎵</h1>
+
+<div class="song-card">
+
+<h3>Song katfkrni fik</h3>
+
+<p>You Get Me So High - The Neighbourhood</p>
+
+<a href="https://open.spotify.com/track/7zwn1eykZtZ5LODrf7c0tS" target="_blank">
+Open Spotify
+</a>
+
+</div>
+
+<div class="song-card">
+
+<h3>Song kanhdiha lik</h3>
+
+<p>BomBom - Nacer</p>
+
+<a href="https://youtu.be/eQhEU4hcoz4" target="_blank">
+Open YouTube
+</a>
+
+</div>
+
+<button onclick="nextPage(6)">
+Walayni rak 3frit kml 😭
+</button>
+
+</div>
+
+</section>
+
+<!-- PAGE 6 -->
+
+<section class="page" id="page6">
+
+<div class="container">
+
+<h1>7ki w shofi ash aytla3 lik 👀</h1>
+
+<div class="scratch-container">
+
+<!--
+Replace image here:
+images/surprise.jpg
+-->
+
+<img
+src="images/surprise.jpg"
+id="hiddenImage">
+
+<canvas id="scratchCanvas"></canvas>
+
+</div>
+
+<div class="btns">
+
+<button onclick="nextPage(7)">
+Ooo hadshi shhal zwin
+(fhalek asi Ziad) 😌
+</button>
+
+<button class="runaway">
+Shokran 😆
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL PAGE -->
+
+<section class="page" id="page7">
+
+<div class="container">
+
+<h1>
+
+Shokran 3la lweqt dyalek ❤️
+
+<br><br>
+
+Ntmna had tze3lika t3jbk 😆
+
+<br><br>
+
+Gha zrbt 3lih dghya w sf.
+
+</h1>
+
+<img
+src="images/final.png"
+class="main-img">
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html> 

@@ -115,3 +115,125 @@ text-decoration:none;
 color:#ff4fa3;
 font-weight:bold;
 }
+.wheel-container{
+display:flex;
+justify-content:center;
+margin:25px 0;
+}
+
+#wheel{
+width:220px;
+height:220px;
+border-radius:50%;
+background:
+conic-gradient(
+#ff8ad8 0deg 40deg,
+#ffd166 40deg 80deg,
+#c77dff 80deg 120deg,
+#90e0ef 120deg 160deg,
+#ffafcc 160deg 200deg,
+#a0c4ff 200deg 240deg,
+#b9fbc0 240deg 280deg,
+#f1c0e8 280deg 320deg,
+#ffc6ff 320deg 360deg
+);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+transition:4s ease-out;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+input{
+width:100%;
+max-width:400px;
+padding:14px;
+margin:10px auto;
+display:block;
+border:none;
+border-radius:15px;
+font-size:1rem;
+}
+
+#loveResult{
+margin-top:20px;
+color:#ff4fa3;
+}
+
+.scratch-container{
+position:relative;
+width:300px;
+height:300px;
+margin:auto;
+overflow:hidden;
+border-radius:20px;
+}
+
+#hiddenImage{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+#scratchCanvas{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+touch-action:none;
+}
+
+#hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:floatHeart 6s linear forwards;
+}
+
+@keyframes floatHeart{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-100vh);
+opacity:0;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:1.6rem;
+}
+
+#wheel{
+width:180px;
+height:180px;
+}
+
+.scratch-container{
+width:260px;
+height:260px;
+}
+
+}

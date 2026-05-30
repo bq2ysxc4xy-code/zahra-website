@@ -91,3 +91,132 @@ alert("🎉 " + prize);
 },4000);
 
 }
+function createHeart(){
+
+const heart =
+document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML = "💖";
+
+heart.style.left =
+Math.random()*100 + "vw";
+
+heart.style.bottom = "-20px";
+
+heart.style.fontSize =
+(15 + Math.random()*25) + "px";
+
+document
+.getElementById("hearts")
+.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,500);
+
+/* SCRATCH CARD */
+
+const canvas =
+document.getElementById("scratchCanvas");
+
+if(canvas){
+
+const ctx =
+canvas.getContext("2d");
+
+canvas.width = 300;
+canvas.height = 300;
+
+ctx.fillStyle = "#c77dff";
+ctx.fillRect(
+0,
+0,
+canvas.width,
+canvas.height
+);
+
+ctx.fillStyle = "white";
+ctx.font = "24px Arial";
+ctx.textAlign = "center";
+
+ctx.fillText(
+"Scratch Here ✨",
+150,
+150
+);
+
+let scratching = false;
+
+function scratch(e){
+
+if(!scratching) return;
+
+const rect =
+canvas.getBoundingClientRect();
+
+const x =
+(e.touches ?
+e.touches[0].clientX :
+e.clientX)
+- rect.left;
+
+const y =
+(e.touches ?
+e.touches[0].clientY :
+e.clientY)
+- rect.top;
+
+ctx.globalCompositeOperation =
+"destination-out";
+
+ctx.beginPath();
+
+ctx.arc(
+x,
+y,
+20,
+0,
+Math.PI*2
+);
+
+ctx.fill();
+
+}
+
+canvas.addEventListener(
+"mousedown",
+()=> scratching=true
+);
+
+canvas.addEventListener(
+"mouseup",
+()=> scratching=false
+);
+
+canvas.addEventListener(
+"mousemove",
+scratch
+);
+
+canvas.addEventListener(
+"touchstart",
+()=> scratching=true
+);
+
+canvas.addEventListener(
+"touchend",
+()=> scratching=false
+);
+
+canvas.addEventListener(
+"touchmove",
+scratch
+);
+
+}
